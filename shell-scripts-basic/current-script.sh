@@ -10,8 +10,8 @@ echo "Process ID of current script is $$"
 echo "After calling other script, $COURCE"
 
 # using source 
-echo "Using sorce to call the script"
+echo "Using source to call the script"
 
-Sorce ./other-script.sh
+Source ./other-script.sh
 
 echo "After calling other script, $COURCE"
