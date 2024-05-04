@@ -1,8 +1,9 @@
 #!/bin/bash
 
-source_directory=/var/log
+SOURCE_DIRECTORY=/var/log
 
-if  [ -d source_directory ]
+
+if  [ -d SOURCE_DIRECTORY ]
 then
     echo "source directory exists"
 else
@@ -10,7 +11,7 @@ else
     exit 1
 fi
 
-FILES=$("find $source_directory -name "*.log" -mtime -7")
+FILES=$("find $SOURCE_DIRECTORY -name "*.log" -mtime -7")
 
 while IFS = read -r line
 do 
