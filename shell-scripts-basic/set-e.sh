@@ -4,6 +4,7 @@ set -e
 USERID=$(id -u)
 Failure(){
     echo "error in $1, command $2"
+}
 trap 'Failure ${LINENO} $BASH_COMMAND' ERR
 
 if [ $USERID -ne 0 ]
@@ -14,5 +15,4 @@ else
     echo "you are a super user"
 fi    
 dnf install mysqlkkk -y 
-dnf install git -y 
- 
+dnf install git -y
