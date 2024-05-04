@@ -6,7 +6,7 @@ if  [ -d source_directory ]
 then
     echo "source directory exists"
 else
-    echo "source directry not present"
+    echo "SOURCE DIRECTORY NOT PRESENT"
     exit 1
 fi
 
