@@ -3,7 +3,7 @@ set -e
 #set -e helps to exit the script if error occurs
 USERID=$(id -u)
 Failure(){
-    echo "error in $1, command $2"
+    echo "error in $1, command: $2"
 }
 trap 'Failure ${LINENO} $BASH_COMMAND' ERR
 
@@ -14,5 +14,6 @@ then
 else
     echo "you are a super user"
 fi    
+llll
 dnf install mysqlkkk -y 
 dnf install git -y
