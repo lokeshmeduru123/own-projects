@@ -8,3 +8,4 @@ echo "Process ID of current script is $$"
 ./other-script.sh
 
 echo "After calling other script, $COURCE"
+
