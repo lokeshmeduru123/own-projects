@@ -2,4 +2,7 @@
 
 COURCE="DEVOPS from other-project"
 
-echo "Calling from other script $COURCE"
+echo "Variable value from other script $COURCE"
+echo "Process ID of current script is $$"
+
+
