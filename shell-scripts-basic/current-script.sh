@@ -12,6 +12,6 @@ echo "After calling other script, $COURCE"
 # using source 
 echo "Using source to call the script"
 
-Source ./other-script.sh
+source ./other-script.sh
 
 echo "After calling other script, $COURCE"
