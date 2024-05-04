@@ -14,6 +14,6 @@ then
 else
     echo "you are a super user"
 fi    
-llll
+llll  #here the script will stops because command is not correct
 dnf install mysqlkkk -y 
 dnf install git -y
