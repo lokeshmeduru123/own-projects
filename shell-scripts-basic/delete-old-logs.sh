@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SOURCE_DIRECTORY="/var/log/"
+SOURCE_DIRECTORY=/var/log/
 
 if  [ -d SOURCE_DIRECTORY ]
 then
