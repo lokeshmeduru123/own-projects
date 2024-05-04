@@ -7,4 +7,4 @@ echo "Process ID of current script is $$"
 
 ./other-script.sh
 
-echo "Before calling other script, $COURCE"
+echo "After calling other script, $COURCE"
