@@ -1,0 +1,10 @@
+- name: To decleare the variables
+  hosts: localhost
+  become: yes
+  var_files:
+  - vars.yaml
+
+  tasks:
+    - name: To pring a Message
+      ansible.builtin.debug:
+        msg: "Hi Im Travelling to {{Place}} on {{Date}}nd {{Month}}."
