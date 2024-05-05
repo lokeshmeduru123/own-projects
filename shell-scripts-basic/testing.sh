@@ -18,4 +18,5 @@ while IFS= read -r file
 do 
     echo "Zippping $file"
     gzip $file
+    mv $@file /home/ec2-user/external
 done <<<$FILES
