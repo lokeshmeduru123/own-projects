@@ -1,0 +1,21 @@
+- name: declearing data types
+  hosts: localhost
+  become: all
+
+  vars:
+    COURSE: DEVOPS #String
+      TOOLS: #List
+        - ANSIBLE
+        - TERRAFORM
+        - GIT
+    EXPERIENCE: #number
+      DEVOPS: 2
+      LINUX: 2
+    REAL_TIME_PROJECT: true # Boolean
+
+  tasks:
+  - name: Print the message
+    ansible.builtin.debug
+      msg: "Cource {{COURCE}} covered {{TOOLS}}; with experience of {{EXPERIENCE}} in realtime project{{REAL_TINME_PROJECT}}"
+
+
