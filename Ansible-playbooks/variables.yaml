@@ -8,6 +8,6 @@
 
 
   tasks:
-    - name: to say a message
+    - name: To pring a Message
       ansible.builtin.debug:
         msg: "Hi Im Travelling to {{Place}} on {{Date}}nd {{Month}}."
