@@ -14,7 +14,7 @@ echo "Files to delete $FILES"
 
 
 #IFS=internel field separator, helps to sepearate lines
-while IFS = read -r line
+while IFS= read -r line
 do 
     echo "Deleting files $line"
 done <<<$FILES
