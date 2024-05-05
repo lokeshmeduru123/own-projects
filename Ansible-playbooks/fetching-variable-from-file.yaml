@@ -1,7 +1,7 @@
 - name: To decleare the variables
   hosts: localhost
   become: yes
-  var_files:
+  vars_files:
   - vars.yaml
 
   tasks:
