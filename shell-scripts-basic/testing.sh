@@ -1,6 +1,7 @@
 #!/bin/bash
 
 DIRECTORY=/home/ec2-user/app
+DESTINATION=/home/ec2-user/external
 
 if [ -d "$DIRECTORY" ]; then
   echo "$DIRECTORY does exist."
@@ -17,5 +18,11 @@ echo "Files to ZIP $FILES"
 while IFS= read -r file
 do 
     echo "Zippping $file"
-    gzip $file && mv $file.gz /home/ec2-user/external
+    gzip $file && mv $file.gz $DESTINATION
+    if [ $? -ne 0]
+        echo "No files to zip"
+    exit1
+    else
+        echo "moving the gipped file to Destionation directory "
+    fi
 done <<<$FILES
