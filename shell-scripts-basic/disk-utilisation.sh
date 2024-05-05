@@ -15,3 +15,6 @@ do
 done <<<$DISK_USAGE
 
 echo -e "message: $MESSAGE"
+echo "$MESSAGE" | mail -s "message" abc@gmail.com
+
+#echo "body" -s "subject" to address
