@@ -21,7 +21,7 @@ do
     gzip $file && mv $file.gz $DESTINATION
     if [ $? -ne 0]
         echo "No files to zip"
-    exit1
+    exit 1
     else
         echo "moving the gipped file to Destionation directory "
     fi
