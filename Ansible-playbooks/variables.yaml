@@ -1,0 +1,11 @@
+- name: To declare the variables
+  hosts: localhost
+  become: yes
+  vars:
+    Place : "Chennai"
+    Month: "May"
+    Date: "01"
+  
+  - task: To Desplay the message
+    ansible.builtin.debug:
+      msg: "Hi Im travelling to {{Place}} on {{Date}}st {{Month}}."
