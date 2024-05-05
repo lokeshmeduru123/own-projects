@@ -1,0 +1,16 @@
+- name: To decleare the variables
+  hosts: localhost
+  become: yes
+  vars_promt:
+  - name: USERNAME
+    prompt: please enter your username
+    private: false
+  - name: PASSWORD
+    prompt: Please enter your password
+    private: true
+
+
+  tasks:
+    - name: To pring a Message
+      ansible.builtin.debug:
+        msg: "Hi my Name is :{{USERNAME}} and Password: {{PASSWORD}}."
