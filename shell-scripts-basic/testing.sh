@@ -17,6 +17,5 @@ echo "Files to ZIP $FILES"
 while IFS= read -r file
 do 
     echo "Zippping $file"
-    gzip $file
-    mv $@file /home/ec2-user/external
+    gzip $file && mv $file.gz /home/ec2-user/external
 done <<<$FILES
