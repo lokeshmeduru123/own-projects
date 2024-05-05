@@ -22,7 +22,6 @@ do
     if [ $? -ne 0]
         echo "No files to zip"
     exit 1
-    else
         echo "moving the gipped file to Destionation directory "
     fi
 done <<<$FILES
