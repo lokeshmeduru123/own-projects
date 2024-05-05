@@ -4,8 +4,8 @@
   tasks: 
   - name: To display the task-1
     ansible.builtin.debug:
-    msg: "Executing Task-1"
+      msg: "Executing Task-1"
 
-  -name: To display the task-2
-   ansible.builtin.debug:
-    msg: "Executing Task-2"
+  - name: To display the task-2
+    ansible.builtin.debug:
+      msg: "Executing Task-2"
