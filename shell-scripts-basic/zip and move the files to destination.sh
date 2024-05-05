@@ -25,6 +25,6 @@ while IFS= read -r file; do
         echo -e "$R No FILES TO ZIP.$N"
         exit 1
     else
-        echo -e "$G Moving the gzipped file to destination directory.$N"
+        echo -e "$G Moved gzipped files to destination directory.$N"
     fi
 done <<< "$FILES"
