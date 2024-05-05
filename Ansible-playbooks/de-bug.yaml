@@ -7,5 +7,5 @@
     msg: "Executing Task-1"
 
   -name: To display the task-2
-    ansible.builtin.debug:
+   ansible.builtin.debug:
     msg: "Executing Task-2"
