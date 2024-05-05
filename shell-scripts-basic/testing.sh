@@ -15,13 +15,13 @@ echo "Files to ZIP $FILES"
 
 
 #IFS=internel field separator, helps to sepearate lines
-while IFS= read -r file
-do 
-    echo "Zippping $file"
-    gzip $file && mv $file.gz $DESTINATION
-    if [ $? -ne 0]
-        echo "No files to zip"
-    exit 1
-        echo "moving the gipped file to Destionation directory "
+while IFS= read -r file; do
+    echo "Zipping $file"
+    gzip "$file" && mv "$file.gz" "$DESTINATION"
+    if [ $? -ne 0 ]; then
+        echo "Error occurred while zipping or moving file."
+        exit 1
+    else
+        echo "Moving the gzipped file to destination directory."
     fi
-done <<<$FILES
+done <<< "$FILES"
