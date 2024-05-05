@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY=/app
+DIRECTORY=/home/ec2-user/app
 
 if [ -d "$DIRECTORY" ]; then
   echo "$DIRECTORY does exist."
@@ -14,8 +14,8 @@ echo "Files to ZIP $FILES"
 
 
 #IFS=internel field separator, helps to sepearate lines
-while IFS= read -r line
+while IFS= read -r file
 do 
-    echo "Zippping $line"
-    gzip $line
+    echo "Zippping $file"
+    gzip $file
 done <<<$FILES
