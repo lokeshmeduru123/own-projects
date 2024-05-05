@@ -1,5 +1,8 @@
 #!/bin/bash
-
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
+Y="\e[33m"
 DIRECTORY=/home/ec2-user/app
 DESTINATION=/home/ec2-user/external
 
@@ -19,9 +22,9 @@ while IFS= read -r file; do
     echo "Zipping $file"
     gzip "$file" && mv "$file.gz" "$DESTINATION"
     if [ $? -ne 0 ]; then
-        echo "Error occurred while zipping or moving file."
+        echo -e "$R No FILES TO ZIP.$N"
         exit 1
     else
-        echo "Moving the gzipped file to destination directory."
+        echo -e "$G Moving the gzipped file to destination directory.$N"
     fi
 done <<< "$FILES"
