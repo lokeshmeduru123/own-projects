@@ -10,7 +10,7 @@ fi
 
 FILES=$(find $DIRECTORY -name "*.log" -mtime +9)
 
-echo "Files to delete $FILES"
+echo "/n Files to delete $FILES"
 
 
 #IFS=internel field separator, helps to sepearate lines
