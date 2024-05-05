@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY=/vat/tmp
+DIRECTORY=/tmp/loki-logs
 
 if [ -d "$DIRECTORY" ]; then
   echo "$DIRECTORY does exist."
