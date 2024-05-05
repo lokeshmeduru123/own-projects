@@ -1,7 +1,7 @@
 - name: To decleare the variables
   hosts: localhost
   become: yes
-  vars_promt:
+  vars_prompt:
   - name: USERNAME
     prompt: please enter your username
     private: false
