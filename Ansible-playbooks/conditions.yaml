@@ -2,25 +2,20 @@
   hosts: localhost
   become: yes
 
-  tasks: 
-  - name: chekcing user
-    ansible.builtin.command: id expense
-    register: USER
-    ignore_errors: true
+  tasks:
+    - name: checking user
+      ansible.builtin.command: id expense
+      register: USER
+      ignore_errors: true
 
-  - name: print the user info
-    ansible.builtin.debug:
-      msg: "user info is {{USER}}""
+    - name: print the user info
+      ansible.builtin.debug:
+        msg: "user info is {{ USER }}"
 
-
-  - name: create user
-    ansible.builtin.command: useradd expense
+    - name: create user
+      ansible.builtin.command: useradd expense
       when: USER.rc != 0  # condition to check return code
 
-  - name: say greetings
-    ansible.builtin.debug:
-      msg: "hello good morning"
-
-    
-
-
+    - name: say greetings
+      ansible.builtin.debug:
+        msg: "hello good morning"
