@@ -6,6 +6,7 @@
     Month: "May"
     Date: "01"
   
-  - tasks: To Desplay the message
+  tasks: 
+  - name: To Desplay the message
     ansible.builtin.debug:
-      msg: "Hi Im travelling to {{Place}} on {{Date}}st {{Month}}."
+        msg: "Hi Im travelling to {{Place}} on {{Date}}st {{Month}}."
