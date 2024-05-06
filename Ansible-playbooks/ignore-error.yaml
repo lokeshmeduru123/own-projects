@@ -1,0 +1,13 @@
+- name: Example of ignoring errors
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Execute a command that might fail
+      ansible.builtin.command: /path/to/some/command
+      ignore_errors: true # to ignore the known error 
+      register: result
+
+    - name: Check the result if needed
+      ansible.builtin.debug:
+        msg: "The command failed but this play continues."
+      when: result is failed
