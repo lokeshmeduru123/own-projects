@@ -8,7 +8,7 @@
       name: "{{item}}"
       state: latest
     loop:
-    - mqsql
+    - mysql
     - postfix
     - nginx
 
