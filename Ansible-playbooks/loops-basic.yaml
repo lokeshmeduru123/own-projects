@@ -2,7 +2,7 @@
   hosts: localhost
   become: yes
 
-  task:
+  tasks:
   - name: installing rpms
     ansible.builtin.dnf:
       name: "{{item}}"
