@@ -66,7 +66,7 @@
   hosts: localhost
   become: yes
   vars:
-    my_lists:
+    my_list:
       - {'key': 'course', 'value': 'Devops'}
       - {'key': 'tools', 'value': 'Ansible'}
       - {'key': 'Type', 'value': 'online'}
