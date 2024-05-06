@@ -5,9 +5,8 @@
   task:
   - name: installing rpms
     ansible.builtin.dnf:
-    name: {{items}}
-    state: latest
-
+     name: {{items}}
+     state: latest
     loop:
     - mqsql
     - nginx
