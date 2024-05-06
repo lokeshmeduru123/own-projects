@@ -4,12 +4,12 @@
 
   task:
   - name: installing rpms
-    ansible.built.in.dnf:
+    ansible.builtin.dnf:
       name: "{{item}}"
       state: latest
     loop:
     - mqsql
     - postfix
     - nginx
-    
+
 
