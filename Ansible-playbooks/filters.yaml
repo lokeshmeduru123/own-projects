@@ -47,7 +47,7 @@
       msg: "min age is {{age | min }}, maximum age is {{age | max}}"
   
   - name: convert dictionary into list 
-    hosts: localhosts
+    hosts: localhost
     become: yes
     vars:
      dic-list:
