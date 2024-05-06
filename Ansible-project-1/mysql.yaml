@@ -3,7 +3,7 @@
   become: yes
   vars:
     login_db_host: db.devops-project.site
-  vars_prompts:
+  vars_prompt:
     name: MySQL_root_Password
     prompt: Please enter mysql_root password
     private : no
@@ -16,22 +16,22 @@
         
   - name: starting service
     ansible.builtin.service:
-      - name: staring mysql
+      - name: staring mysqld
         state: started
         enabled: yes
   - name: installing python mysql dependecies
     ansible.builtin.pip:
       name: 
         - PyMySQL
-        - crypotography
+        - cryptography
       executable: pip3.9
 
   - name: To check the DB connection
-  community.mysql.mysql_info:
-    login_user: root
-    login_password: {{MySQL_root_Password}}
-    login_host: {{login_db_host}}
-    filter: version
+    community.mysql.mysql_info:
+     login_user: root
+     login_password: {{MySQL_root_Password}}
+     login_host: {{login_db_host}}
+     filter: version
     ignore_errors: yes
     register: mysq_connection_output
   
