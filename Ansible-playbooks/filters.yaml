@@ -4,7 +4,7 @@
   tasks:
   - name: print message
     ansible.builtin.debug:
-      msg: "Hi This is {{Name | default('LOKESH') }.}" 
+      msg: "Hi This course is {{ Tool | default('Ansible') }}" 
 
 - name: UPPER_CASE
   hosts: localhost
