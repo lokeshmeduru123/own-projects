@@ -5,7 +5,7 @@
     - name: installing and uninstalling
       ansible.builtin.dnf:
         name: "{{item}}"
-        state: latest
+        state: "{{latest}}""
       loop:
       - {name: 'mysql', state: latest}
       - {name: 'postfix', state: absent}
