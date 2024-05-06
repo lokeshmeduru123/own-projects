@@ -1,0 +1,15 @@
+- name: installing packages
+  hosts: localhost
+  become: yes
+
+  task:
+  - name: installing rpms
+    ansible.builtin.dnf:
+    name: {{items}}
+    state: latest
+
+    loop:
+    - mqsql
+    - nginx
+    - postfix
+    
