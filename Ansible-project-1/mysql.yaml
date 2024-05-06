@@ -16,7 +16,7 @@
         
   - name: starting service
     ansible.builtin.service:
-      - name: mysqld
+        name: mysqld
         state: started
         enabled: yes
   - name: installing python mysql dependecies
