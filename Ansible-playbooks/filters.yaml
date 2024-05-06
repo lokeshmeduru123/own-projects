@@ -1,0 +1,17 @@
+- name: To define variable
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: print message
+    ansible.builtin.debug:
+      msg: "Hi This is {{Name | default('LOKESH') }.}" 
+
+- name: UPPER_CASE
+  hosts: localhost
+  become: yes
+  vars:
+   Greetings: Good Morning
+  tasks:
+  - name: convert into upper-case
+    ansible.builtin.debug:
+      msg: "Hi {{Greetings | upper}}"
