@@ -20,8 +20,8 @@
   hosts: localhost
   become: yes
   vars:
-    Greetings1:GOOD EVENING
+    Wishes: GOOD EVENING
   tasks: 
   - name: converting to lowercase
     ansible.builtin.debug:
-      msg: "Hi {{Greetings1 | lower}}"
+      msg: "Hi {{Wishes | lower}}"
