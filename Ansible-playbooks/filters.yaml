@@ -46,19 +46,19 @@
     ansible.builtin.debug:
       msg: "min age is {{age | min }}, maximum age is {{age | max}}"
   
-  - name: convert dictionary into list 
-    hosts: localhost
-    become: yes
-    vars:
-     dic_list: # dictionary
-        course: Devops
-        tools: Ansible
-        Type: online
-    tasks:
-    - name: before converting dictionary to list
-      ansible.builtin.debug:
-        msg: "Before convrting {{dic_list}}"
-    - name: after converting dictionary list
-      ansible.builtin.debug:
-        msg: "after converting {{dic_list | dict2items}}"
+- name: convert dictionary into list 
+  hosts: localhost
+  become: yes
+  vars:
+    dic_list: # dictionary
+      course: Devops
+      tools: Ansible
+      Type: online
+  tasks:
+  - name: before converting dictionary to list
+    ansible.builtin.debug:
+      msg: "Before convrting {{dic_list}}"
+  - name: after converting dictionary list
+    ansible.builtin.debug:
+      msg: "after converting {{dic_list | dict2items}}"
               
