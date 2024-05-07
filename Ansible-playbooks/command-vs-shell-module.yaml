@@ -6,4 +6,9 @@
     ansible.builtin.command: "echo 'Hi Good mormning' > /tmp/command.txt"
   - name : shell module  
     ansible.builtin.shell: "echo 'Hi Good mormning' > /tmp/shell.txt"
+
+# in command module--> works only for simple direct commands, if it having redirecting ot pipe symbols it won't work 
+
+# in shell module--> works only for all commads , if it having redirecting ot pipe symbols it wwill work 
+
      
