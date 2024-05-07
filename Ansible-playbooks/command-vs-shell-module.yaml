@@ -11,4 +11,4 @@
 
 # in shell module--> works only for all commads , if it having redirecting ot pipe symbols it wwill work 
 
-     
+# what ever works in command module , it will work in shell module but vice versa is not true.
