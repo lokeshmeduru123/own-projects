@@ -3,5 +3,7 @@
   become : yes
   tasks: 
   - name : command module 
-    ansible.builtin.command: echo "Hi Good mormning"
+    ansible.builtin.command: echo "Hi Good mormning > /tmp/command.txt"
+  - name : shell module  
+    ansible.builtin.shell: echo "Hi Good mormning > /tmp/command.txt"
      
