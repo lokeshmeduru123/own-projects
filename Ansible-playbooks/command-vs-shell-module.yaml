@@ -1,0 +1,7 @@
+- name : to check the command and shell modules 
+  hosts: localhost
+  become : yes
+  tasks: 
+  - name : command module 
+    ansible.builtin.command:
+      echo: "Hi Good mormning"
