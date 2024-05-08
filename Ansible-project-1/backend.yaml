@@ -6,7 +6,7 @@
     login_db_host: db.devops-project.site
 
   tasks: 
-  -name : To disable node js
+  - name : To disable node js
    ansible.builtin.command : dnf module disable nodejs -y
 
   - name : To enable node js 20 -version
