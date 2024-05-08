@@ -1,0 +1,42 @@
+- name : Expense project 
+  hosts: frontend
+  become : yes
+  tasks: 
+  - name : intall nginx 
+    ansible.builtin.dnf: 
+      name : nginx
+      state: latest
+
+  - name : enable nginx service
+    ansible.builtin.service:
+      name: nginx
+      enabled: yes
+
+  - name: Remove existing .html files
+    ansible.builtin.file:
+     path: /usr/share/nginx/html/*
+     state: absent
+
+  - name: Download application code
+    ansible.builtin.get_url:
+     url: https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip
+     dest: /tmp/frontend.zip
+
+  - name: Unarchive a file that is already on the remote machine
+    ansible.builtin.unarchive:
+     src: /tmp/frontend.zip
+     dest: /usr/share/nginx/html/
+     remote_src: yes
+
+
+  - name : copy the expense.conf file
+    ansible.builtin.copy:
+     src: expense.conf
+     dest: /etc/nginx/default.d/expense.conf
+
+  - name : to start the nginx service 
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      
+
