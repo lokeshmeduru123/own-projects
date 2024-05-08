@@ -19,11 +19,6 @@
     loop: 
       - nodejs
       - mysql
-  - name: to enable node js 
-    ansible.builtin.service:
-      name: nodejs
-      state: started
-      enabled: yes
 
   - name: to create expense 
     ansible.builtin.user:
