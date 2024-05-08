@@ -23,7 +23,8 @@
   - name: to enable node js 
     ansible.builtin.service:
       name: nodejs
-      state: enabled
+      state: started
+      enabled: yes
 
   - name: to create expense 
     ansible.builtin.user:
