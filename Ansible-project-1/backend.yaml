@@ -7,7 +7,7 @@
 
   tasks: 
   - name : To disable node js
-   ansible.builtin.command : dnf module disable nodejs -y
+    ansible.builtin.command : dnf module disable nodejs -y
 
   - name : To enable node js 20 -version
     ansible.builtin.command: dnf module enable nodejs:20 -y
