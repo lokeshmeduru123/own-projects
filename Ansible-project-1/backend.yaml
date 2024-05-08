@@ -58,7 +58,7 @@
       executable: pip3.9
 
   - name: To check the DB connection and dump the data 
-    community.mysql.mysql_info:
+    community.mysql.mysql_db:
       login_user: root
       login_password: "{{ login_password }}"
       login_host: "{{ login_db_host }}"
